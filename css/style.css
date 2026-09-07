@@ -421,19 +421,23 @@ body { padding-left: 64px; }
   margin: 0 auto;
   padding: 28px 24px 60px;
   display: grid;
-  grid-template-columns: 320px 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 24px;
   align-items: start;
 }
-@media (max-width: 950px) { .dash-shell { grid-template-columns: 1fr; } }
+@media (max-width: 800px) { .dash-shell { grid-template-columns: 1fr; } }
 
 .rank-card {
   background: linear-gradient(160deg, var(--blue) 0%, var(--blue-dark) 100%);
   border-radius: var(--radius-card);
-  padding: 28px 24px;
+  padding: 40px 32px;
   color: #fff;
   position: relative;
   overflow: hidden;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .rank-card::before {
   content: "";
@@ -444,8 +448,8 @@ body { padding-left: 64px; }
   top: -60px; right: -60px;
 }
 .rank-ring-wrap {
-  width: 130px; height: 130px;
-  margin: 0 auto 16px;
+  width: 240px; height: 240px;
+  margin: 0 auto 24px;
   position: relative;
 }
 .rank-ring {
@@ -464,22 +468,22 @@ body { padding-left: 64px; }
   position: absolute;
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
-  width: 86px; height: 86px;
+  width: 160px; height: 160px;
   border-radius: 50%;
   background: #fff;
   display: flex; align-items: center; justify-content: center;
   overflow: hidden;
 }
-.rank-ring-mascot { width: 76px; height: auto; }
+.rank-ring-mascot { width: 140px; height: auto; }
 .rank-label {
   text-align: center;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  font-size: 20px;
-  margin-bottom: 4px;
+  font-size: 26px;
+  margin-bottom: 6px;
 }
-.rank-sub { text-align: center; font-size: 12.5px; opacity: 0.85; margin-bottom: 18px; }
-.exp-label { display: flex; justify-content: space-between; font-size: 12.5px; font-weight: 600; margin-bottom: 6px; }
+.rank-sub { text-align: center; font-size: 15px; opacity: 0.85; margin-bottom: 26px; }
+.exp-label { display: flex; justify-content: space-between; font-size: 14px; font-weight: 600; margin-bottom: 8px; }
 .exp-track {
   position: relative;
   height: 14px;
