@@ -31,10 +31,11 @@ function renderDash() {
   const state = loadDash();
 
   const pct = Math.min(100, (state.exp / state.expMax) * 100);
-  document.getElementById("expLabel").textContent = `${state.exp} / ${state.expMax}`;
+  document.getElementById("expLabel").textContent = `${state.exp}/${state.expMax}`;
   document.getElementById("pillFillWrap").style.width = `${pct}%`;
   document.getElementById("ringFill").style.setProperty("--pct", `${pct}%`);
-  document.getElementById("rankTitle").textContent = rankTitleFor(state.exp);
+  const rankTitleEl = document.getElementById("rankTitle");
+  if (rankTitleEl) rankTitleEl.textContent = rankTitleFor(state.exp);
 
   document.getElementById("todayChip").textContent = new Date().toLocaleDateString(undefined, { weekday: "short", day: "numeric", month: "short", year: "numeric" });
 
