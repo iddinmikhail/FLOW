@@ -30,8 +30,10 @@ function saveDash(state) {
 function renderDash() {
   const state = loadDash();
 
+  const pct = Math.min(100, (state.exp / state.expMax) * 100);
   document.getElementById("expLabel").textContent = `${state.exp} / ${state.expMax}`;
-  document.getElementById("expFill").style.width = `${Math.min(100, (state.exp / state.expMax) * 100)}%`;
+  document.getElementById("pillFillWrap").style.width = `${pct}%`;
+  document.getElementById("ringFill").style.setProperty("--pct", `${pct}%`);
   document.getElementById("rankTitle").textContent = rankTitleFor(state.exp);
 
   document.getElementById("todayChip").textContent = new Date().toLocaleDateString(undefined, { weekday: "short", day: "numeric", month: "short", year: "numeric" });
@@ -76,7 +78,7 @@ function renderDash() {
   const gridEl = document.getElementById("dailyQuestGrid");
   gridEl.innerHTML = state.dailyQuests.map(q => `
     <div class="daily-quest-card">
-      <div class="icon">${q.icon}</div>
+      <div class="icon"><img src="images/icon-checklist.png" alt="" class="daily-quest-icon" /></div>
       <div class="qtitle">${escapeHtmlDash(q.title)}</div>
       <div class="qmeta">${q.meta}</div>
     </div>

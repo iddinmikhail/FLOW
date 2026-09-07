@@ -60,7 +60,7 @@ function renderReviewPanel() {
     <div class="review-file">📎 ${flowEscapeHtml(sub.file)}</div>
 
     <div class="rating-row">
-      <button type="button" class="rating-btn rating-excellent" data-rating="Excellent">🏆<span>Excellent</span></button>
+      <button type="button" class="rating-btn rating-excellent" data-rating="Excellent"><img src="images/icon-thumbsup.png" class="rating-icon" alt="" /><span>Excellent</span></button>
       <button type="button" class="rating-btn rating-average" data-rating="Improve">🎯<span>Improve</span></button>
       <button type="button" class="rating-btn rating-poor" data-rating="Poor">⚠️<span>Poor</span></button>
     </div>

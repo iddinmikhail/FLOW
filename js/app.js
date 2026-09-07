@@ -81,7 +81,12 @@ function render() {
   if (currentFilter !== "all") quests = quests.filter(q => q.status === currentFilter);
 
   if (quests.length === 0) {
-    ongoingEl.innerHTML = '<p class="empty-note">No quests here — add one on the left, or pick a different filter.</p>';
+    ongoingEl.innerHTML = `
+      <div class="empty-state">
+        <img src="images/mascot-awan.png" alt="" class="empty-state-mascot" />
+        <p class="empty-note">No quests here — add one on the left, or pick a different filter.</p>
+      </div>
+    `;
   } else {
     ongoingEl.innerHTML = quests.map(q => `
       <div class="ongoing-card">

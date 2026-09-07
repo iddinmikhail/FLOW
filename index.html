@@ -11,7 +11,7 @@
 <body>
 
 <nav class="top-nav">
-    <div class="top-nav-brand">FLOW</div>
+    <div class="top-nav-brand"><img src="images/mascot-awan.png" alt="FLOW mascot" class="nav-mascot" /> FLOW</div>
     <div class="top-nav-links">
         <a href="index.html" class="active">Dashboard</a>
         <a href="quest.html">Quest Board</a>
@@ -25,11 +25,22 @@
 
     <!-- ============ LEFT: FLOW RANK ============ -->
     <aside class="rank-card">
-        <div class="rank-avatar">🏁</div>
+        <div class="rank-ring-wrap">
+            <img src="images/ring-track.png" alt="" class="rank-ring rank-ring-track" />
+            <img src="images/ring-fill.png" alt="" class="rank-ring rank-ring-fill" id="ringFill" />
+            <div class="rank-ring-center">
+                <img src="images/icon-desk.png" alt="" class="rank-ring-icon" />
+            </div>
+        </div>
         <div class="rank-label">Flow Rank</div>
         <div class="rank-sub" id="rankTitle">Rookie Driver</div>
         <div class="exp-label"><span>Flow EXP</span><span id="expLabel">52 / 100</span></div>
-        <div class="exp-track"><div class="exp-fill" id="expFill" style="width:52%"></div></div>
+        <div class="exp-track">
+            <img src="images/pill-track.png" alt="" class="pill-img pill-track-img" />
+            <div class="pill-fill-wrap" id="pillFillWrap" style="width:52%">
+                <img src="images/pill-fill.png" alt="" class="pill-img pill-fill-img" />
+            </div>
+        </div>
     </aside>
 
     <!-- ============ MAIN ============ -->
