@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>FLOW — Teacher Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+<nav class="top-nav">
+    <div class="top-nav-brand">FLOW</div>
+    <div class="top-nav-links">
+        <a href="index.html">Dashboard</a>
+        <a href="quest.html">Quest Board</a>
+        <a href="teacher.html" class="active">Teacher</a>
+        <a href="assign.html">Assign Task</a>
+        <a href="submissions.html">Submissions</a>
+    </div>
+</nav>
+
+<div class="dash-shell" style="grid-template-columns: 1fr 320px;">
+    <main class="dash-main">
+
+        <div class="greeting-row">
+            <h1>Hi, Advisor</h1>
+            <span class="date-chip" id="teacherDateChip"></span>
+        </div>
+        <p style="color:var(--text-muted); font-size:13.5px; margin-top:-10px;">Let's keep everything flowing smoothly.</p>
+
+        <div class="stat-cards-row">
+            <div class="stat-card-mini"><div class="num" id="statActive">0</div><div class="lbl">Active Quest</div></div>
+            <div class="stat-card-mini warn"><div class="num" id="statDue">2</div><div class="lbl">Due Soon</div></div>
+            <div class="stat-card-mini danger"><div class="num" id="statOverdue">1</div><div class="lbl">Overdue</div></div>
+            <div class="stat-card-mini ok"><div class="num" id="statCompleted">16</div><div class="lbl">Completed</div></div>
+        </div>
+
+        <div class="teacher-grid" id="studentGrid"></div>
+
+        <div class="comment-form-card">
+            <h3 style="font-size:15px;font-weight:700;margin-bottom:12px;">Add Comment</h3>
+            <select id="commentTarget"></select>
+            <textarea id="commentText" rows="3" placeholder="Write your comment here..."></textarea>
+            <button id="btnSendComment" class="btn-primary">Send Comment</button>
+            <div class="comment-log" id="commentLog"></div>
+        </div>
+
+    </main>
+
+    <aside class="quest-side-panel">
+        <div class="side-card">
+            <h3>Reminders</h3>
+            <p class="side-hint" style="margin-bottom:10px;">Quick actions for your team.</p>
+            <button class="btn-primary btn-full" style="margin-bottom:10px;" onclick="location.href='assign.html'">Assign Quest</button>
+            <button class="btn-primary btn-full" style="background:var(--orange);" onclick="location.href='submissions.html'">Give Feedback on Quest</button>
+        </div>
+    </aside>
+</div>
+
+<script src="js/flow-data.js"></script>
+<script src="js/teacher.js"></script>
+</body>
+</html>

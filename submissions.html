@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>FLOW — Quest Submissions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+<nav class="top-nav">
+    <div class="top-nav-brand">FLOW</div>
+    <div class="top-nav-links">
+        <a href="index.html">Dashboard</a>
+        <a href="quest.html">Quest Board</a>
+        <a href="teacher.html">Teacher</a>
+        <a href="assign.html">Assign Task</a>
+        <a href="submissions.html" class="active">Submissions</a>
+    </div>
+</nav>
+
+<div style="max-width:1300px;margin:0 auto;padding:28px 24px 60px;">
+    <div class="greeting-row" style="margin-bottom:22px;">
+        <h1>Quest Submissions</h1>
+        <span class="date-chip" id="subDateChip"></span>
+    </div>
+
+    <div class="stat-cards-row">
+        <div class="stat-card-mini warn"><div class="num" id="statNew">0</div><div class="lbl">New Submissions</div></div>
+        <div class="stat-card-mini"><div class="num" id="statAwaiting">0</div><div class="lbl">Awaiting Review</div></div>
+        <div class="stat-card-mini ok"><div class="num" id="statReviewed">0</div><div class="lbl">Reviewed</div></div>
+        <div class="stat-card-mini danger"><div class="num" id="statLate">0</div><div class="lbl">Late</div></div>
+    </div>
+
+    <div class="submission-layout">
+        <div class="sub-table-card">
+            <table class="sub-table">
+                <thead>
+                    <tr><th>Student</th><th>Quest</th><th>Submitted</th><th>Status</th><th></th></tr>
+                </thead>
+                <tbody id="subTableBody"></tbody>
+            </table>
+        </div>
+
+        <div class="review-panel" id="reviewPanel"></div>
+    </div>
+</div>
+
+<script src="js/flow-data.js"></script>
+<script src="js/submissions.js"></script>
+</body>
+</html>

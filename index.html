@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>FLOW — Student Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+<nav class="top-nav">
+    <div class="top-nav-brand">FLOW</div>
+    <div class="top-nav-links">
+        <a href="index.html" class="active">Dashboard</a>
+        <a href="quest.html">Quest Board</a>
+        <a href="teacher.html">Teacher</a>
+        <a href="assign.html">Assign Task</a>
+        <a href="submissions.html">Submissions</a>
+    </div>
+</nav>
+
+<div class="dash-shell">
+
+    <!-- ============ LEFT: FLOW RANK ============ -->
+    <aside class="rank-card">
+        <div class="rank-avatar">🏁</div>
+        <div class="rank-label">Flow Rank</div>
+        <div class="rank-sub" id="rankTitle">Rookie Driver</div>
+        <div class="exp-label"><span>Flow EXP</span><span id="expLabel">52 / 100</span></div>
+        <div class="exp-track"><div class="exp-fill" id="expFill" style="width:52%"></div></div>
+    </aside>
+
+    <!-- ============ MAIN ============ -->
+    <main class="dash-main">
+
+        <div class="greeting-row">
+            <h1 id="greeting">Hi, Daleesya</h1>
+            <span class="date-chip" id="todayChip"></span>
+        </div>
+
+        <div class="ongoing-highlight">
+            <span class="tag">Ongoing Quest</span>
+            <h2>Refine Project Management and Marketing and Collaboration Portfolio</h2>
+            <p class="deadline" id="deadlineText"></p>
+        </div>
+
+        <div class="submission-rows" id="submissionRows"></div>
+
+        <div class="daily-quest-section">
+            <h3>Daily Quest</h3>
+            <div class="daily-quest-grid" id="dailyQuestGrid"></div>
+        </div>
+
+    </main>
+</div>
+
+<script src="js/dashboard.js"></script>
+</body>
+</html>

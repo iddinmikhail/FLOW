@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Quest Board</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+<nav class="top-nav">
+    <div class="top-nav-brand">FLOW</div>
+    <div class="top-nav-links">
+        <a href="index.html">Dashboard</a>
+        <a href="quest.html" class="active">Quest Board</a>
+        <a href="teacher.html">Teacher</a>
+        <a href="assign.html">Assign Task</a>
+        <a href="submissions.html">Submissions</a>
+    </div>
+</nav>
+
+<div class="app-shell">
+
+    <!-- ============ LEFT: NEW QUEST FORM ============ -->
+    <aside class="quest-form-panel">
+        <h2 class="panel-title">New Quest</h2>
+        <p class="panel-subtitle">Break your work into a quest and track it to completion.</p>
+
+        <div class="field-group">
+            <label for="questTitle">Quest</label>
+            <input type="text" id="questTitle" placeholder="Write down your quest here" />
+        </div>
+
+        <div class="field-group">
+            <label>Subquests</label>
+            <div id="subquestList" class="subquest-list"></div>
+            <div class="subquest-add-row">
+                <input type="text" id="subquestInput" placeholder="Add a subquest" />
+                <button type="button" id="btnAddSubquest" class="btn-icon-add" aria-label="Add subquest">+</button>
+            </div>
+        </div>
+
+        <div class="field-group">
+            <label>Priority</label>
+            <div class="priority-picker" id="priorityPicker">
+                <button type="button" class="priority-chip" data-priority="Low"><span class="dot dot-low"></span>Low</button>
+                <button type="button" class="priority-chip" data-priority="Medium"><span class="dot dot-medium"></span>Medium</button>
+                <button type="button" class="priority-chip" data-priority="High"><span class="dot dot-high"></span>High</button>
+            </div>
+        </div>
+
+        <div class="field-group">
+            <label for="questDue">Due Date</label>
+            <input type="date" id="questDue" />
+        </div>
+
+        <button id="btnAddQuest" class="btn-primary btn-full">Add Quest</button>
+        <p id="formMsg" class="form-msg" style="display:none;"></p>
+    </aside>
+
+    <!-- ============ MAIN ============ -->
+    <main class="quest-main">
+
+        <header class="quest-header">
+            <div>
+                <p class="quest-greeting">You've got <strong id="questCount">0</strong> quest<span id="questPlural">s</span> today</p>
+                <p class="quest-date" id="todayDate"></p>
+            </div>
+            <div class="header-mark">⚑</div>
+        </header>
+
+        <section class="ongoing-section">
+            <div class="section-heading-row">
+                <h3>Ongoing Quest</h3>
+                <div class="status-filters" id="statusFilters">
+                    <button class="filter-pill active" data-filter="all">Due</button>
+                    <button class="filter-pill" data-filter="To Do">To Do</button>
+                    <button class="filter-pill" data-filter="In Progress">In Progress</button>
+                    <button class="filter-pill" data-filter="Completed">Completed</button>
+                </div>
+            </div>
+            <div id="ongoingList" class="ongoing-list"></div>
+        </section>
+
+        <section class="quest-columns">
+            <div class="quest-column">
+                <h3>Daily Quest</h3>
+                <div id="dailyGrid" class="quest-grid"></div>
+            </div>
+            <div class="quest-column">
+                <h3>Completed Quest</h3>
+                <div id="completedGrid" class="quest-grid"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============ RIGHT: COMMENTS + NOTES ============ -->
+    <aside class="quest-side-panel">
+        <div class="side-card">
+            <h3>Comments</h3>
+            <div id="commentsList" class="comments-list"></div>
+            <div class="add-new-row">
+                <input type="text" id="commentInput" placeholder="Leave a comment for your team" />
+                <button type="button" id="btnAddComment" class="btn-add-new">+ Add New</button>
+            </div>
+        </div>
+
+        <div class="side-card">
+            <h3>Notes</h3>
+            <p class="side-hint">Rate how this week's quests went.</p>
+            <div class="rating-row">
+                <button type="button" class="rating-btn rating-excellent" data-rating="Excellent">🏆<span>Excellent</span></button>
+                <button type="button" class="rating-btn rating-average" data-rating="Average">🎯<span>Average</span></button>
+                <button type="button" class="rating-btn rating-poor" data-rating="Poor">⚠️<span>Poor</span></button>
+            </div>
+            <p id="ratingResult" class="side-hint" style="display:none;"></p>
+        </div>
+    </aside>
+
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

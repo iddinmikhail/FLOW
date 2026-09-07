@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>FLOW — Assign Task</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+<nav class="top-nav">
+    <div class="top-nav-brand">FLOW</div>
+    <div class="top-nav-links">
+        <a href="index.html">Dashboard</a>
+        <a href="quest.html">Quest Board</a>
+        <a href="teacher.html">Teacher</a>
+        <a href="assign.html" class="active">Assign Task</a>
+        <a href="submissions.html">Submissions</a>
+    </div>
+</nav>
+
+<div style="max-width:1300px;margin:0 auto;padding:28px 24px 60px;">
+    <div class="greeting-row" style="margin-bottom:22px;">
+        <h1>Assign Task</h1>
+        <span class="date-chip" id="assignDateChip"></span>
+    </div>
+
+    <div class="assign-grid" id="assignGrid"></div>
+</div>
+
+<script src="js/flow-data.js"></script>
+<script src="js/assign.js"></script>
+</body>
+</html>
