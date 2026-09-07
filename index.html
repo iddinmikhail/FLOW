@@ -10,15 +10,13 @@
 </head>
 <body>
 
-<nav class="top-nav">
-    <div class="top-nav-brand"><img src="images/mascot-awan.png" alt="FLOW mascot" class="nav-mascot" /> FLOW</div>
-    <div class="top-nav-links">
-        <a href="index.html" class="active">Dashboard</a>
-        <a href="quest.html">Quest Board</a>
-        <a href="teacher.html">Teacher</a>
-        <a href="assign.html">Assign Task</a>
-        <a href="submissions.html">Submissions</a>
-    </div>
+<nav class="icon-sidebar">
+    <img src="images/logo-flow.png" alt="FLOW" class="sidebar-logo" />
+    <a href="index.html" class="active" title="Dashboard"><img src="images/icon-clipboard.png" alt="Dashboard" /></a>
+    <a href="quest.html" title="Quest Board"><img src="images/icon-checklist.png" alt="Quest Board" /></a>
+    <a href="submissions.html" title="Submissions"><img src="images/icon-thumbsup.png" alt="Submissions" /></a>
+    <a href="teacher.html" title="Advisor"><img src="images/icon-gear.png" alt="Advisor" /></a>
+    <div class="sidebar-spacer"></div>
 </nav>
 
 <div class="dash-shell">
@@ -29,7 +27,7 @@
             <img src="images/ring-track.png" alt="" class="rank-ring rank-ring-track" />
             <img src="images/ring-fill.png" alt="" class="rank-ring rank-ring-fill" id="ringFill" />
             <div class="rank-ring-center">
-                <img src="images/icon-desk.png" alt="" class="rank-ring-icon" />
+                <img src="images/mascot-awan.png" alt="Flow mascot" class="rank-ring-mascot" />
             </div>
         </div>
         <div class="rank-label">Flow Rank</div>
@@ -47,7 +45,7 @@
     <main class="dash-main">
 
         <div class="greeting-row">
-            <h1 id="greeting">Hi, Daleesya</h1>
+            <h1 id="greeting" class="page-header-lockup"><img src="images/logo-flow.png" alt="Flow" class="wordmark" /><span class="lockup-text">ing in, <strong>Daleesya</strong></span></h1>
             <span class="date-chip" id="todayChip"></span>
         </div>
 
